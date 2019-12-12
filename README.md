@@ -17,7 +17,7 @@ The following command simply returns the MD5 Checksum of an ASCII file
 iges_md5 input_file.iges
 ```
 
-The following file ignores the HEADER, if the input file is an IGES file
+The following command ignores the HEADER, if the input file is an IGES file
 ```bash
 iges_md5 input_file.iges --ignore-header
 ```
