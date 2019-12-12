@@ -41,7 +41,7 @@ def main():
     if args.ignore_header:
         func = iges_hdr_fnc
 
-    print(md5(args.iges_file, func))
+    print(md5(args.input_file, func))
 
 
 if __name__ == '__main__':
