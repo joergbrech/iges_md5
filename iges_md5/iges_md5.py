@@ -25,7 +25,7 @@ def md5(file, hdr_fnc):
 def iges_hdr_fnc(string):
     """identifies a line of an iges file as a header line"""
 
-    if string[72] == ord('S') or string[72] == ord('G'):
+    if len(string)<73 or string[72] == ord('S') or string[72] == ord('G'):
         return True
     return False
 
