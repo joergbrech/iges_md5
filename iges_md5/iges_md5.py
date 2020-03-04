@@ -14,8 +14,10 @@ def md5(file, hdr_fnc):
 
     hash_md5 = hashlib.md5()
     with open(file, "rb") as f:
+        pos = f.tell()
         while hdr_fnc(f.readline()):
-            pass
+            pos = f.tell()
+        f.seek(pos)
 
         for chunk in iter(lambda: f.read(4096), b""):
             hash_md5.update(chunk)
